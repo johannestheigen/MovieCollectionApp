@@ -252,14 +252,14 @@ public class UserInterface {
     boolean containsMovies = false;
     System.out.print("Enter a category: ");
     String category = sc.nextLine();
-    System.out.println("Current movies in this category: " + category);
+    System.out.println("Current movies in: " + category);
     Iterator<String> iterator = collection.getListOfMoviesByCategory(category);
     while (iterator.hasNext()) {
       System.out.println(iterator.next());
       containsMovies = true;
     }
     if (!containsMovies) {
-      System.out.println("There are currently no movies in this category.");
+      System.out.println("There are currently no movies in: " + category);
     }
   }
 
