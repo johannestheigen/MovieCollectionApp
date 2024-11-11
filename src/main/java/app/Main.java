@@ -5,7 +5,7 @@ package app;
  * Initializes the <code>UserInterface</code> to handle user interactions
  * and manages the movie collection. The <code>main</code> method ensures smooth execution
  * by handling exceptions.
- *
+ *d
  * @author Johannes Nupen Theigen
  * @version 0.0.1
  * @since 11.09.2024

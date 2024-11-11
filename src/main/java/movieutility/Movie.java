@@ -1,4 +1,4 @@
-package entity;
+package movieutility;
 
 import java.time.LocalDate;
 
@@ -9,8 +9,8 @@ import java.time.LocalDate;
  * which can be added to a collection of movies.</p>
  *
  * @author Johannes Nupen Theigen
- * @version 0.0.1
- * @since 11.09.2024
+ * @version 0.0.2
+ * @since 11.11.2024
  **/
 public class Movie {
   private String name;
@@ -52,7 +52,7 @@ public class Movie {
    * @param name the name of the movie, e.g., <b>Harry Potter and the Sorcerer's Stone</b>
    * @throws IllegalArgumentException if the input <b>null</b> or <b>empty</b>
    */
-  public void setName(String name) throws IllegalArgumentException {
+  public void setName(String name) {
     if (name == null || name.isEmpty()) {
       throw new IllegalArgumentException("The name cannot be null or empty");
     }
@@ -74,7 +74,7 @@ public class Movie {
    * @param category the category of the movie e.g., <b>Fantasy</b>
    * @throws IllegalArgumentException if the input is <b>null</b> or <b>empty</b>
    */
-  public void setCategory(String category) throws IllegalArgumentException {
+  public void setCategory(String category) {
     if (category == null || name.isEmpty()) {
       throw new IllegalArgumentException("The category cannot be null or empty");
     }
@@ -97,7 +97,7 @@ public class Movie {
    *                    e.g, <b>2001-11-10</b>
    * @throws IllegalArgumentException if the input is <b>null</b>.
    */
-  public void setReleaseDate(LocalDate releaseDate) throws IllegalArgumentException {
+  public void setReleaseDate(LocalDate releaseDate) {
     if (releaseDate == null) {
       throw new IllegalArgumentException("The release date cannot be null");
     }
@@ -119,7 +119,7 @@ public class Movie {
    *  @param runTime the runtime of a movie e.g, <b>152 minutes</b>
    * @throws IllegalArgumentException if the runtime is <b>null</b> or <b>empty</b>
    */
-  public void setRunTime(String runTime) throws IllegalArgumentException {
+  public void setRunTime(String runTime) {
     if (runTime == null || runTime.isEmpty()) {
       throw new IllegalArgumentException("The runtime cannot be null or empty");
     }

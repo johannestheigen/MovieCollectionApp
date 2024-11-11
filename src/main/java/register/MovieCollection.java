@@ -1,6 +1,6 @@
 package register;
 
-import entity.Movie;
+import movieutility.Movie;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Iterator;

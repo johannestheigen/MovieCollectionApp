@@ -183,12 +183,18 @@ public class UserInterface {
   private void removeMovie(Scanner sc) {
     System.out.print("Enter movie to remove: ");
     final String name = sc.nextLine();
+    System.out.print("Are you sure you want to remove the movie? (y/n): ");
+    String userInput = sc.nextLine().trim().toLowerCase();
 
-    boolean removed = collection.removeMovie(name);
-    if (removed) {
-      System.out.println(name + " removed successfully!");
+    if (userInput.equals("y")) {
+      boolean success = collection.removeMovie(name);
+      if (success) {
+        System.out.println(name + " has been cleared.");
+      } else {
+        System.out.println(name + " does not exist");
+      }
     } else {
-      System.out.println(name + " does not exists. Please try again");
+      System.out.println("Remove operation canceled.");
     }
   }
 
